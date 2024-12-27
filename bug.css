@@ -1,0 +1,13 @@
+The following CSS code snippet exhibits an uncommon error related to the specificity of selectors:
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+```
+
+The expected behavior is that the paragraph (`p`) element should have a red color. However, due to the specificity of CSS selectors, the first rule (`div p`) takes precedence and applies the blue color to the paragraph inside a `div` element, even if the second rule (`p`) is declared later.
