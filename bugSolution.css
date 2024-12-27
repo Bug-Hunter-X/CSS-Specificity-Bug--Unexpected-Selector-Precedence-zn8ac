@@ -1,0 +1,29 @@
+The solution involves understanding and adjusting CSS specificity rules.  Here's the corrected CSS to ensure the paragraph has red color regardless of parent element:
+
+```css
+/* Specificity improved using the `!important` flag */
+p {
+  color: red !important;
+}
+
+div p {
+  color: blue;
+}
+
+/*or*/
+
+/* Using an extra class on paragraph to improve specificity */
+.my-paragraph {
+  color: red;
+}
+
+/* or improve specificity of second selector by increasing specificity */
+div p {
+  color: blue;
+}
+p.red {
+  color: red;
+} 
+```
+
+The `!important` flag should be used cautiously.  It's generally better to fix specificity issues by adjusting selectors.
